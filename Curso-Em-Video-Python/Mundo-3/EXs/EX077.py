@@ -1,6 +1,7 @@
-palavras = ('Mercado', 'Programacao', 'Futuro', 'praticar')
-for p in palavras:
-    print(f'\nNa palavra {p.upper()} temos: ', end='')
-    for letras in p:
-        if letras in 'aeiou':
-            print(letras, end=' ')
+palavras = ('aprender', 'programar', 'python')
+
+for iten in palavras:
+    print(f'\nNa palavra {iten} temos: ', end='')
+    for letra in iten:
+        if letra in 'aeiou':
+            print(f'{letra} ', end='')

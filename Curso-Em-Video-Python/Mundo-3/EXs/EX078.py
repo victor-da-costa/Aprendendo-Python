@@ -1,20 +1,21 @@
-lista = []
-maior = 0
-menor = 0
+numeros = []
 for num in range(0, 5):
-    lista.append(int(input(f'Digite o {num + 1}º da lista: ')))
+    numeros.append(int(input(f"Digite o {num+1}° número: ")))
     if num == 0:
-        maior = lista[num]
-        menor = lista[num]
+        maior = menor = numeros[num]
     else:
-        if lista[num] > maior:
-            maior = lista[num]
-        if lista[num] < menor:
-            menor = lista[num]
-print(f'O maior e menor número da lista é {maior} e {menor} que estão nas posição', end=' ')
-for pos, valor in enumerate(lista):
-    if valor == maior:
-        print(pos, end=' ')
-for pos, valor in enumerate(lista):
-    if valor == menor:
-        print(pos, end=' respectivamente...')
+        if numeros[num] > maior:
+            maior = numeros[num]
+        if numeros[num] < menor:
+            menor = numeros[num]
+
+print(f'O maior número da lista é o {maior}, e aparece na posição', end='')
+for posicao, num in enumerate(numeros):
+    if num == maior:
+        print(f' {posicao}° ', end='')
+print()
+print(f'O menor número da lista é o {menor}, e aparece na posição', end='')
+for posicao, num in enumerate(numeros):
+    if num == menor:
+        print(f' {posicao}° ', end='')
+print()

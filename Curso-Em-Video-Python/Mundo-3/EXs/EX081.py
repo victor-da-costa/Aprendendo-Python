@@ -1,12 +1,14 @@
-valores = []
+numeros = []
+
 while True:
-    valores.append(int(input('Digite o valor: ')))
-    opção = str(input('Quer continuar? [S/N] ')).strip().upper()[0]
-    if opção == 'N':
+    numeros.append(int(input('Informe um número: ')))
+    cont = str(input('Quer continuar? S/N ')).upper()
+    if cont == 'N':
         break
-valores.sort(reverse=True)
-print(f'A lista {valores} contem {len(valores)} valores')
-if 5 in valores:
-    print('O número 5 foi encontrado na lista...')
+numeros.sort(reverse=True)
+print(f'Foram digitados {len(numeros)} números')
+print(f'Lista em ordem decrescente: {numeros}')
+if 5 in numeros:
+    print('O número 5 está na lista')
 else:
-    print('O número 5 NÃO foi encontrado...')
+    print('O número 5 não foi encontrado na lista')

@@ -1,20 +1,23 @@
-pessoas = []
-dados = []
-cont = maior = menor = 0
+grupo = []
+individuo = []
+
+maior = menor = 0
 while True:
-    dados.append(str(input('Nome: ')))
-    dados.append(float(input('Peso: ')))
-    if len(pessoas) == 0:
-        maior = menor = dados[1]
+    individuo.append(str(input('Nome: ')))
+    individuo.append(float(input('Peso: ')))
+    if len(grupo) == 0:
+        maior = menor = individuo[1]
     else:
-        if dados[1] > maior:
-            maior = dados[1]
-        if dados[1] < menor:
-            menor = dados[1]
-    pessoas.append(dados[:])
-    dados.clear()
-    cont += 1
-    opção = str(input('Quer continuar? [S/N] ')).strip().upper()[0]
-    if opção == 'N':
+        if individuo[1] > maior:
+            maior = individuo[1]
+        if individuo[1] < menor:
+            menor = individuo[1]
+    grupo.append(individuo[:])
+    individuo.clear()
+    cont = str(input('Quer continuar? S/N ')).upper()
+    if cont == 'N':
         break
-print(f'Total: {cont}, a pessoa mais pesada é {maior} e a mais leve é {menor}')
+print(grupo)
+print(f'Foram cadastradas na lista {len(grupo)} pessoas')
+print(f'A pessoa mais pesada da lista é {maior}')
+print(f'A pessoa mais leve da lista é {menor}')

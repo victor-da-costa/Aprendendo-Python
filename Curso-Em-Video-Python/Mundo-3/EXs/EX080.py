@@ -1,13 +1,12 @@
-valores = []
-for cont in range(1, 6):
-    num = int(input(f'Digite o {cont}º da lista: '))
-    if cont == 1 or num > valores[-1]:
-        valores.append(num)
-    else:
-        pos = 0
-        while pos <= len(valores):
-            if num < valores[pos]:
-                valores.insert(pos, num)
-                break
-            pos += 1
-print(valores)
+numeros = []
+for num in range(0, 5):
+    n = int(input(f'Digite o {num+1}° número: '))
+    if num == 0 or n > numeros[-1]:
+        numeros.append(n)
+pos = 0
+while n < len(numeros):
+    if pos <= numeros[pos]:
+        numeros.insert(pos, n)
+        break
+    pos += 1
+print(numeros)

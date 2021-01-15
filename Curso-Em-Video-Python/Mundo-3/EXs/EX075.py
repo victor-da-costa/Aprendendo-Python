@@ -1,12 +1,12 @@
-num = (int(input('Digite o 1º número: ')), 
-int(input('Digite o 2º número: ')), 
-int(input('Digite o 3º número: ')), 
-int(input('Digite o 4º número: ')))
-print(f'O número 9 aparece {num.count(9)} vezes')
-if 3 in num:
-    print(f'O número 3 está na posição {num.index(3)+1}')
+numeros = (int(input("Informe o 1° número: ")), int(input("Informe o 2° número: ")), 
+int(input("Informe o 3° número: ")), int(input("Informe o 4° número: ")))
+
+
+print(f"O número 9 apareceu {numeros.count(9)} vezes")
+if 3 in numeros:
+    print(f"O número 3 aparece na posição {numeros.index(3)} da lista")
 else:
-    print('O número 3 não foi digitado')
-for n in num:
-    if n % 2 == 0:
-        print(n, end=' ')
+    print("O numero 3 não foi inserido na lista")
+for num in numeros:
+    if num % 2 == 0:
+        print(num, end='')

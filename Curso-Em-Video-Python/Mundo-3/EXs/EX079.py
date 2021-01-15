@@ -1,13 +1,13 @@
 numeros = []
 while True:
     num = int(input('Digite um número: '))
-    if num not in numeros:
-        numeros.append(num)
+    if num in numeros:
+        print(f'O número {num} já existe na lista, portanto não será adicionado')
     else:
-        print('Número duplicado...')
-    opção = ' '
-    while opção not in 'SN':
-        opção = str(input('Deseja continuar? [S/N] ')).strip().upper()[0]
-    if opção == 'N':
+        numeros.append(num)
+    continuar = str(input('Quer adicionar mais um número na lista? S/N ')).upper()
+    if continuar == 'N':
         break
-print(sorted(numeros))
+
+numeros.sort()
+print(f'Os números adicionado a lista foram: {numeros}')

@@ -1,11 +1,15 @@
-simbolos = []
-expressão = str(input('Digite a expressão: '))
-for simb in expressão:
-    if simb == '(':
-        simbolos.append(simb)
-    if simb == ')':
-            simbolos.pop()
-if len(simbolos) == 0:
-    print('Expressão valida')
+expressao = str(input('Digite a expressao matemática: '))
+cont = []
+for simbolo in expressao:
+    if simbolo == '(':
+        cont.append('(')
+    elif simbolo == ')':
+        if len(cont) > 0:
+            cont.pop()
+        else:
+            cont.append(')')
+            break
+if len(cont) == 0:
+    print('A expressão matemática é válida!!!')
 else:
-    print('Expressão invalida')
+    print('A expressão matemática é invalida!!!')

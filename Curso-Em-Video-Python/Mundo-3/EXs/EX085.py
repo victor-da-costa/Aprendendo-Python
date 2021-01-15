@@ -1,11 +1,12 @@
-valores = [[], []]
-for num in range(1, 8):
-    número = (int(input(f'Digite o {num}º número: ')))
-    if número % 2 == 0:
-        valores[0].append(número)
+numeros = [[], []]
+
+for n in range(0, 7):
+    num = int(input(f'Digite o {n+1}º número: '))
+    if num % 2 == 0:
+        numeros[0].append(num)
     else:
-        valores[1].append(número)
-valores[0].sort()
-valores[1].sort()
-print(f'Lista de números pares: {valores[0]}')
-print(f'Lista de números impares: {valores[1]}')
+        numeros[1].append(num)
+    
+    print(f'Números adicionados à lista: {numeros}')
+    print(f'Números pares adicionados à lista: {numeros[0]}')
+    print(f'Números impares adicionados à lista: {numeros[1]}')
